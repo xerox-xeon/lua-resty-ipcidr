@@ -2,6 +2,8 @@
 
 A simple and very fast function to check against CIDR
 
+[![Build Status](https://travis-ci.org/lifeblood/lua-resty-ipcidr.svg?branch=master)](https://travis-ci.org/lifeblood/lua-resty-ipcidr)
+
 # Overview
 
 ```

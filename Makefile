@@ -15,5 +15,5 @@ install: all
 	$(INSTALL) lib/resty/checkups/*.lua $(DESTDIR)$(LUA_LIB_DIR)/resty/checkups/
 
 test: all
-	util/lua-releng
+	sudo util/lua-releng
 	PATH=$(OPENRESTY_PREFIX)/nginx/sbin:$$PATH prove -I../test-nginx/lib -r t/
