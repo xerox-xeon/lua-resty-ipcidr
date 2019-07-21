@@ -20,10 +20,10 @@ local function unsign(bin)
     return bin
 end
 
-local function ip_CIDR_Check(ip, CIDR)
+local function ip_in_cidr(ip, cidr)
 	local ip_ip = ip2long(ip)
-	net, mask = string.match(CIDR, "(.*)%/(.*)")
-	if net == nil then net = CIDR end
+	net, mask = string.match(cidr, "(.*)%/(.*)")
+	if net == nil then net = cidr end
 	local ip_net = ip2long(net)
 	if mask then
 		local mask_num   = tonumber(mask)
@@ -39,9 +39,9 @@ local function ip_CIDR_Check(ip, CIDR)
 	
 end
 
-local function ip_in_cidrs( ip_addr, CIDRS )
-	for _,cidr in ipairs(CIDRS) do
-        if ip_CIDR_Check(ip_addr, cidr) then
+local function ip_in_cidrs( ip, cidrs )
+	for _,cidr in ipairs(cidrs) do
+        if ip_in_cidr(ip, cidr) then
             return true
         end
     end
