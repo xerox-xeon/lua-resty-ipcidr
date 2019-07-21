@@ -27,7 +27,7 @@ local function ip_in_cidr(ip, cidr)
 	local ip_net = ip2long(net)
 	if mask then
 		local mask_num   = tonumber(mask)
-		if not mask_num or (mask_num > 32 or mask_num < 0) then
+	    if mask_num > 32 or mask_num < 0 then
 	        return nil, "Invalid prefix: /"..tonumber(mask)
 	    end
 	    local ip_mask = bnot(lshift(1, 32 - mask) - 1) 
