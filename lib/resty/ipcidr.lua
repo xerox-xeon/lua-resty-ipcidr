@@ -22,11 +22,11 @@ end
 
 local function ip_in_cidr(ip, cidr)
 	local ip_ip = ip2long(ip)
-	net, mask = string.match(cidr, "(.*)%/(.*)")
+	local net, mask = string.match(cidr, "(.*)%/(.*)")
 	if net == nil then net = cidr end
 	local ip_net = ip2long(net)
 	if mask then
-		local mask_num   = tonumber(mask)
+		local mask_num  = tonumber(mask)
 	    if mask_num > 32 or mask_num < 0 then
 	        return nil, "Invalid prefix: /"..tonumber(mask)
 	    end
@@ -39,7 +39,7 @@ local function ip_in_cidr(ip, cidr)
 	
 end
 
-local function ip_in_cidrs( ip, cidrs )
+local function ip_in_cidrs(ip, cidrs)
 	if type( cidrs ) ~= "table" then
 	    return nil, "Invalid cidrs" 
 	end
