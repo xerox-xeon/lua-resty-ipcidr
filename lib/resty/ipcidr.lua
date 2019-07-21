@@ -40,6 +40,9 @@ local function ip_in_cidr(ip, cidr)
 end
 
 local function ip_in_cidrs( ip, cidrs )
+	if type( cidrs ) ~= "table" then
+	    return nil, "Invalid cidrs" 
+	end
 	for _,cidr in ipairs(cidrs) do
         if ip_in_cidr(ip, cidr) then
             return true

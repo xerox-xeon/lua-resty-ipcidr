@@ -1,6 +1,6 @@
 # lua-resty-ipcidr
 
-CIDR functions for working with IP addresses.
+A simple and very fast function to check against CIDR
 
 # Overview
 
