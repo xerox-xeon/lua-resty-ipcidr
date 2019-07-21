@@ -3,7 +3,7 @@ local lshift = bit.lshift
 local bnot = bit.bnot
 local band = bit.band
 
-local _M = { _VERSION = "0.20" }
+local _M = { _VERSION = "0.21" }
 
 
 local function ip2long( ip )
