@@ -1,1 +1,6 @@
 .idea
+.idea/encodings.xml
+.idea/lua-resty-ipcidr.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
