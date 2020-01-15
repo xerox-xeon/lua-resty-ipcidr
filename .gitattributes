@@ -4,3 +4,4 @@
 *.css linguist-language=lua
 *.pl linguist-language=lua
 *.t linguist-language=lua
+*.ini linguist-language=lua
