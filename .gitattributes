@@ -3,3 +3,4 @@
 *.html linguist-language=lua
 *.css linguist-language=lua
 *.pl linguist-language=lua
+*.t linguist-language=lua
