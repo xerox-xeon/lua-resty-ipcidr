@@ -1,4 +1,4 @@
-language: perl
+language: lua
 perl:
     - 5.10
 cache:
