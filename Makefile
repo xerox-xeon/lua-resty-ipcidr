@@ -20,4 +20,4 @@ test: all
 	sudo chmod +x util/lua-releng
 	util/lua-releng
 	#tail -n 20 t/servroot/logs/error.log
-	PATH=$(OPENRESTY_PREFIX)/nginx/sbin:$$PATH prove -I ../test-nginx/lib -r t/
+	PATH=$(OPENRESTY_PREFIX)/nginx/sbin:$$PATH  prove -Itest-nginx/lib -r t
