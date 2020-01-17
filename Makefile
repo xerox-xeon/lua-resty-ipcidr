@@ -15,8 +15,9 @@ install: all
 
 test: all
 	pwd
+	cd .. && ls -als
 	sudo $(INSTALL) lib/resty/*.lua $(OPENRESTY_PREFIX)/lualib/resty/
 	sudo chmod +x util/lua-releng
 	util/lua-releng
 	#tail -n 20 t/servroot/logs/error.log
-	PATH=$(OPENRESTY_PREFIX)/nginx/sbin:$$PATH prove -I /home/travis/perl5/lib/perl5/Test/Nginx/ -r t/
+	PATH=$(OPENRESTY_PREFIX)/nginx/sbin:$$PATH prove -I ../test-nginx/lib -r t/
