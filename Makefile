@@ -15,7 +15,7 @@ install: all
 
 test: all
 	pwd
-	cd .. && ls -als
+	ls -als
 	sudo $(INSTALL) lib/resty/*.lua $(OPENRESTY_PREFIX)/lualib/resty/
 	sudo chmod +x util/lua-releng
 	util/lua-releng
